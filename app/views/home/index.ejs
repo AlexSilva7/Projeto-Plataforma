@@ -1,0 +1,68 @@
+<%- include('../common/head') %>
+
+    <body id="tela-login" class="main-bg">
+        
+            <div class="login-container text-c animated flipInX mt-5 pt-2">
+
+                <img class="mt-5" src="../../public/img/Logo.png"  width="75%" height="75%" alt="Logo">
+
+                        <!--
+                        <h4 class="text-dark mb-4 mt-3 display-6">Sistema Integrado Plataforma</h4>
+                        -->
+
+                        <!--
+                        <p class="text-dark">Login</p>
+                        -->
+
+                    <div class="container-content shadow p-2 mb-3 mt-5 rounded form-login">
+
+                        <!-- icon usuario 
+                        <div class="pt-4">
+                            <div class="icon-user bg-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        -->
+                        <div>
+                            <img src="../../public/img/logoP.jpg" alt="LogoP" width="30%" height="30%">
+                        </div>
+                        
+
+                        <form action="/admin" class="margin-t mt-4" method="POST">
+                            <div class="form-group mb-4 d-flex justify-content-center rounded">
+
+                                <input type="text" id="login" name= "login" 
+                                class="form-control border-secondary" 
+                                placeholder="login" required="">
+
+                            </div>
+                            <div class="form-group d-flex justify-content-center rounded">
+
+                                <input type="password" id="senha" name= "senha" 
+                                class="form-control d-flex border-secondary" 
+                                placeholder="*****" required="">
+                            
+                            </div>
+                            <!--
+                            <button type="submit" class="form-button button-l margin-b">Entrar</button>
+                            <a class="text-darkyellow" href="#"><small>Esqueceu sua senha?</small></a>
+                            <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
+                            <br>
+                            <a class="text-darkyellow" href="#"><small>Registrar</small></a>
+                            -->
+                            <button type="submit" 
+                            id = "icone" 
+                            class="oi oi-account-login text-warning margin-t btn pt-4 mb-3">
+                            </button>
+
+                        </form>
+                    
+                        <!--
+                        <p class="margin-t text-whitesmoke"><small> Plataforma Impact &copy; 2021</small> </p>
+                            -->
+                    </div>
+            </div>
+    </body>
+</html>
