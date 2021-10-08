@@ -277,7 +277,7 @@ body {
 }
 
 #cadastro header h4{
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     padding-top: 10px;
 }
@@ -320,6 +320,23 @@ body {
 
 .divisor p{
     font-size: 1.5em;
+}
+
+text {
+    max-width: 100%;
+    width: 100%;
+}
+
+input, select, textarea {
+    max-width: 500px;
+}
+
+.larg-form{
+    width: 90%;
+}
+
+#cadastro form{
+    font-size: 80%;
 }
 
 

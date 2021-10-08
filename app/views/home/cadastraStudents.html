@@ -39,7 +39,7 @@
                     
                     <div class="col-md-4">
                         <div class="row">
-                            <h4 class="display-4 mr-5 pl-5"> Lays dos Santos Monteiro</h4>
+                            <h4 class="display-4 ml-4 mr-4"> Lays dos Santos Monteiro</h4>
                             <div class="icon-user">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#264178" class="bi bi-person-fill" viewBox="0 0 16 16">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -65,94 +65,138 @@
         <div class="container">
             <form class="">
                 <!-- caixas de texto -->
-                <div class="row mt-3" style="border: 1px solid red;">
-                        <div class="col-md-6">
-                            <div class="form-group" style="border: 1px solid red;">
+                <div class="row mt-3">
+                        <div class="col-md-5">
+                            <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input class="form-control" type="text" id="nome" placeholder="Nome">
+                                <input class="form-control w-100" type="text" id="nome" name="nome" 
+                                placeholder="Nome" >
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <div class="form-group">
                                 <label for="nome">Sobrenome</label>
-                                <input class="form-control" type="text" id="sobrenome" placeholder="Sobrenome">
+                                <input class="form-control w-100" type="text" id="sobrenome" name="sobrenome" 
+                                placeholder="Sobrenome">
                             </div>
                         </div>
                 </div>
                 
                 <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="email">Endereço</label>
-                        <input class="form-control" type="email" id="email" placeholder="Endereço">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="email">Endereço</label>
+                            <input class="form-control w-100" type="text" id="endereco" name="endereco" 
+                            placeholder="Endereço">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="email">Data de nascimento</label>
+                            <input class="form-control larg-form" type="date" id="data" name="data" 
+                            value = "">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="email">Cidade de nascimento</label>
+                            <input class="form-control w-75" type="text" id="naturalidade" name="naturalidade"
+                            placeholder="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="email">Escolaridade</label>
+                            <input class="form-control w-100" type="text" id="escolaridade" name="escolaridade"
+                            placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="estado-civil">Estado Civil</label>
+                            <select class="custom-select">
+                                <option selected></option>
+                                <option value="1">Solteiro</option>
+                                <option value="2">Casado</option>
+                                <option value="3">Divorciado</option>
+                                <option value="4">Viúvo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="parentes">Mora com quantas pessoas?</label>
+                            <input class="form-control w-100" type="text" id="parentes" name="parentes">
+                        </div>
                     </div>
 
-                    <div class="form-group col-md-6">
-                        <label for="email">Data de nascimento</label>
-                        <input class="form-control" type="email" id="email" placeholder="Digite seu email">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="situacao-emprego">Situação de emprego</label>
+                            <input class="form-control larg-form" type="text" id="situacao-emprego" 
+                            name="situacao-emprego">
+                        </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="renda">Renda</label>
+                            <input class="form-control w-100" type="text" id="renda" name="renda">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="renda-familiar">Renda Familiar</label>
+                            <input class="form-control w-100" type="text" id="renda-familiar">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="rg">RG</label>
+                            <input class="form-control larg-form" type="text" id="rg" 
+                            name="rg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input class="form-control w-75" type="text" id="cpf" name="cpf">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input class="form-control w-75" type="text" id="telefone" name="telefone">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="telefone">Email</label>
+                            <input class="form-control w-100" type="text" id="telefone">
+                        </div>
+                    </div>
+
+                </div>
+
                 
-
-                
-                
-                <div class="form-group">
-                    <label for="email">Naturalidade</label>
-                    <input class="form-control" type="email" id="email" placeholder="Digite seu email">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Escolaridade</label>
-                    <input class="form-control" type="email" id="email" placeholder="Digite seu email">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Estado civil</label>
-                    <input class="form-control" type="email" id="email" placeholder="Digite seu email">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Parentes</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Situação de emprego</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Renda</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Renda Familiar</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">RG</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">CPF</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Email</label>
-                    <input class="form-control" type="text" id="telefone">
-                </div>
-
-
-
                 <!-- botao -->
                 <input class="btn btn-primary mb-2" type="submit" value="Enviar">
             </form>
