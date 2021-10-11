@@ -234,7 +234,7 @@ body {
     margin-right: auto;
 }
 
-#principal,#cadastro .icon-user{
+#cadastro .icon-user{
     width: 55px;
 	height: 45px;
 	border-radius: 50%;
@@ -242,7 +242,20 @@ body {
     background: #e6e6e6;
 }
 
-#principal,#cadastro .icon-user svg{
+#cadastro .icon-user svg{
+    margin-left: 12px;
+    margin-top: 5px;
+}
+
+#area-principal .icon-user{
+    width: 55px;
+	height: 45px;
+	border-radius: 50%;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+#area-principal .icon-user svg{
     margin-left: 12px;
     margin-top: 5px;
 }
@@ -271,7 +284,7 @@ body {
 
 
 #area-principal header h4{
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     padding-top: 10px;
 }
@@ -292,7 +305,7 @@ body {
     margin-right: auto;
 }
 
-#cadastro .icon-sec{
+.icon-sec{
     width: 200px;
 	height: 190px;
 	border-radius: 50%;
@@ -338,6 +351,7 @@ input, select, textarea {
 #cadastro form{
     font-size: 80%;
 }
+
 
 
 

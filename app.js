@@ -19,9 +19,12 @@ app.use(express.static('./app'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+var completeName
+
 app.get('/', async(req, res) => {
     res.render("home/index")
 })
+
 
 app.post('/admin', async(req, res) => {
     let {login, senha} = req.body
@@ -29,7 +32,7 @@ app.post('/admin', async(req, res) => {
     let nameUser = await dbconnection.query('SELECT name FROM admins WHERE login = $1', [login])
     let password
 
-    var completeName
+    completeName
 
     if(pass.rows.length == 0){
         password = ''
@@ -39,7 +42,6 @@ app.post('/admin', async(req, res) => {
         completeName = nameUser.rows[0].name
     }
 
-    
     if(senha == password){
         /*
         res.redirect('/contact')
@@ -48,6 +50,22 @@ app.post('/admin', async(req, res) => {
     }else{
         res.redirect('/')
     }
+})
+
+app.post('/cadastro', async(req, res) => {
+    res.render("home/cadastro", {name:completeName})
+})
+
+app.post('/salvar-estudante', async(req, res) => {
+    let {nome, sobrenome, endereco, data, naturalidade, escolaridade, estadoCivil, parentes, situacaoEmprego,renda, rendaFamiliar, rg, cpf, telefone, email} = req.body
+
+     dbconnection.query('INSERT INTO students(name, surname, adress, birthdate, place_of_birth, scholarity, marital_status, relatives, employment_status, income, familyinconme) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)',
+    [nome],[sobrenome],[endereco],[data],[naturalidade],[escolaridade],[estadoCivil],[parentes],[situacaoEmprego],[renda],[rendaFamiliar])
+
+    console.log(nome)
+
+    res.redirect('/')
+
 })
 
 app.get('/contact', async(req, res) => {

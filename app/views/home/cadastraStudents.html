@@ -13,14 +13,12 @@
         <!-- Estilo customizado -->
         <link rel="stylesheet" type="text/css" href="../../public/css/estilo.css">
 
-
         <title>Plataforma Impact</title>
 
     </head>
 
     <body id="cadastro">
         <header>
-
             <div class="pt-2 ml-2 mr-2">
                 <div class="row">
                     <div class="col-md-4">
@@ -50,12 +48,17 @@
 
                     <div class="col-md-4">
                         <div class="d-flex justify-content-end  pt-1">
-                            <button>Sair</button>
+                            <!--<button>Sair</button>-->
+                            <a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="White" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>   
         </header>
 
         <div class="divisor">
@@ -63,7 +66,7 @@
         </div>
 
         <div class="container">
-            <form class="">
+            <form class="" action="/salvar-estudante" method="POST">
                 <!-- caixas de texto -->
                 <div class="row mt-3">
                         <div class="col-md-5">
@@ -76,7 +79,7 @@
 
                         <div class="col-md-7">
                             <div class="form-group">
-                                <label for="nome">Sobrenome</label>
+                                <label for="sobrenome">Sobrenome</label>
                                 <input class="form-control w-100" type="text" id="sobrenome" name="sobrenome" 
                                 placeholder="Sobrenome">
                             </div>
@@ -86,14 +89,14 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="form-group">
-                            <label for="email">Endereço</label>
+                            <label for="endereco">Endereço</label>
                             <input class="form-control w-100" type="text" id="endereco" name="endereco" 
                             placeholder="Endereço">
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label for="email">Data de nascimento</label>
+                            <label for="data">Data de nascimento</label>
                             <input class="form-control larg-form" type="date" id="data" name="data" 
                             value = "">
                         </div>
@@ -103,7 +106,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label for="email">Cidade de nascimento</label>
+                            <label for="naturalidade">Cidade de nascimento</label>
                             <input class="form-control w-75" type="text" id="naturalidade" name="naturalidade"
                             placeholder="">
                         </div>
@@ -111,9 +114,16 @@
                     
                     <div class="col-md-7">
                         <div class="form-group">
-                            <label for="email">Escolaridade</label>
-                            <input class="form-control w-100" type="text" id="escolaridade" name="escolaridade"
-                            placeholder="">
+                            <label for="escolaridade">Escolaridade</label>
+                            <select name="escolaridade" id="escolaridade" class="custom-select">
+                                <option selected></option>
+                                <option value="1">Fundamental Incompleto</option>
+                                <option value="2">Fundamental Completo</option>
+                                <option value="3">Ensino Médio Incompleto</option>
+                                <option value="4">Ensino Médio Completo</option>
+                                <option value="5">Ensino Superior Incompleto</option>
+                                <option value="6">Ensino Superior Completo</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -121,8 +131,8 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="estado-civil">Estado Civil</label>
-                            <select class="custom-select">
+                            <label for="estadoCivil">Estado Civil</label>
+                            <select class="custom-select" id="estadoCivil" name="estadoCivil">
                                 <option selected></option>
                                 <option value="1">Solteiro</option>
                                 <option value="2">Casado</option>
@@ -134,15 +144,25 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="parentes">Mora com quantas pessoas?</label>
-                            <input class="form-control w-100" type="text" id="parentes" name="parentes">
+                            <select class="custom-select" id="parentes" name="parentes">
+                                <option selected></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="2">3</option>
+                                <option value="2">4</option>
+                                <option value="3">5+</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="situacao-emprego">Situação de emprego</label>
-                            <input class="form-control larg-form" type="text" id="situacao-emprego" 
-                            name="situacao-emprego">
+                            <label for="situacaoEmprego">Situação de emprego</label>
+                            <select class="custom-select" id="situacaoEmprego" name="situacaoEmprego">
+                                <option selected></option>
+                                <option value="Desempregado">Desempregado</option>
+                                <option value="Trabalhando">Trabalhando</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -151,14 +171,28 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="renda">Renda</label>
-                            <input class="form-control w-100" type="text" id="renda" name="renda">
+                            <select class="custom-select" id="renda" name="renda">
+                                <option selected></option>
+                                <option value="0 à 499$">0 à 499$</option>
+                                <option value="500 à 999$">500 à 999$</option>
+                                <option value="1000 à 1999$">1000 à 1999$</option>
+                                <option value="2000 à 2999$">2000 à 2999$</option>
+                                <option value="acima de 3000$">acima de 3000$</option>
+                            </select>
                         </div>
                     </div>
                     
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="renda-familiar">Renda Familiar</label>
-                            <input class="form-control w-100" type="text" id="renda-familiar">
+                            <label for="rendaFamiliar">Renda Familiar</label>
+                            <select class="custom-select" id="rendaFamiliar" name="rendaFamiliar">
+                                <option selected></option>
+                                <option value="0 à 499$">0 à 499$</option>
+                                <option value="500 à 999$">500 à 999$</option>
+                                <option value="1000 à 1999$">1000 à 1999$</option>
+                                <option value="2000 à 2999$">2000 à 2999$</option>
+                                <option value="acima de 3000$">acima de 3000$</option>
+                            </select>
                         </div>
                     </div>
 
@@ -189,8 +223,8 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="telefone">Email</label>
-                            <input class="form-control w-100" type="text" id="telefone">
+                            <label for="email">Email</label>
+                            <input class="form-control w-100" type="email" id="email">
                         </div>
                     </div>
 

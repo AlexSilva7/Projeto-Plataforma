@@ -1,0 +1,185 @@
+<%- include('../common/head') %>
+
+<body id="cadastro">
+
+    <%- include('../common/header') %>
+
+    <div class="divisor">
+        <h4 class="pt-4 mr-5">Ficha de Matrícula</h4>    
+    </div>
+
+    <div class="container">
+        <form class="" action="/salvar-estudante" method="POST">
+            <!-- caixas de texto -->
+            <div class="row mt-3">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input class="form-control w-100" type="text" id="nome" name="nome" 
+                            placeholder="Nome" >
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input class="form-control w-100" type="text" id="sobrenome" name="sobrenome" 
+                            placeholder="Sobrenome">
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input class="form-control w-100" type="text" id="endereco" name="endereco" 
+                        placeholder="Endereço">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="data">Data de nascimento</label>
+                        <input class="form-control larg-form" type="date" id="data" name="data" 
+                        value = "">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="naturalidade">Cidade de nascimento</label>
+                        <input class="form-control w-75" type="text" id="naturalidade" name="naturalidade"
+                        placeholder="">
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label for="escolaridade">Escolaridade</label>
+                        <select name="escolaridade" id="escolaridade" class="custom-select">
+                            <option selected></option>
+                            <option value="1">Fundamental Incompleto</option>
+                            <option value="2">Fundamental Completo</option>
+                            <option value="3">Ensino Médio Incompleto</option>
+                            <option value="4">Ensino Médio Completo</option>
+                            <option value="5">Ensino Superior Incompleto</option>
+                            <option value="6">Ensino Superior Completo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="estadoCivil">Estado Civil</label>
+                        <select class="custom-select" id="estadoCivil" name="estadoCivil">
+                            <option selected></option>
+                            <option value="1">Solteiro</option>
+                            <option value="2">Casado</option>
+                            <option value="3">Divorciado</option>
+                            <option value="4">Viúvo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="parentes">Mora com quantas pessoas?</label>
+                        <select class="custom-select" id="parentes" name="parentes">
+                            <option selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="2">3</option>
+                            <option value="2">4</option>
+                            <option value="3">5+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="situacaoEmprego">Situação de emprego</label>
+                        <select class="custom-select" id="situacaoEmprego" name="situacaoEmprego">
+                            <option selected></option>
+                            <option value="Desempregado">Desempregado</option>
+                            <option value="Trabalhando">Trabalhando</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="renda">Renda</label>
+                        <select class="custom-select" id="renda" name="renda">
+                            <option selected></option>
+                            <option value="0 à 499$">0 à 499$</option>
+                            <option value="500 à 999$">500 à 999$</option>
+                            <option value="1000 à 1999$">1000 à 1999$</option>
+                            <option value="2000 à 2999$">2000 à 2999$</option>
+                            <option value="acima de 3000$">acima de 3000$</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="rendaFamiliar">Renda Familiar</label>
+                        <select class="custom-select" id="rendaFamiliar" name="rendaFamiliar">
+                            <option selected></option>
+                            <option value="0 à 499$">0 à 499$</option>
+                            <option value="500 à 999$">500 à 999$</option>
+                            <option value="1000 à 1999$">1000 à 1999$</option>
+                            <option value="2000 à 2999$">2000 à 2999$</option>
+                            <option value="acima de 3000$">acima de 3000$</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="rg">RG</label>
+                        <input class="form-control larg-form" type="text" id="rg" 
+                        name="rg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input class="form-control w-75" type="text" id="cpf" name="cpf">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input class="form-control w-75" type="text" id="telefone" name="telefone">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control w-100" type="email" id="email">
+                    </div>
+                </div>
+            </div>
+
+            <!-- botao -->
+            <input class="btn btn-primary mb-2" type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="../../public/js/bootstrap.min.js"></script>
+
+</body>
