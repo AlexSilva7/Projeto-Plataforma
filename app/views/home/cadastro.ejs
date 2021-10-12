@@ -9,7 +9,7 @@
     </div>
 
     <div class="container">
-        <form class="" action="/salvar-estudante" method="POST">
+        <form class="" action="/salvarEstudante" method="POST">
             <!-- caixas de texto -->
             <div class="row mt-3">
                     <div class="col-md-5">
@@ -60,12 +60,12 @@
                         <label for="escolaridade">Escolaridade</label>
                         <select name="escolaridade" id="escolaridade" class="custom-select">
                             <option selected></option>
-                            <option value="1">Fundamental Incompleto</option>
-                            <option value="2">Fundamental Completo</option>
-                            <option value="3">Ensino Médio Incompleto</option>
-                            <option value="4">Ensino Médio Completo</option>
-                            <option value="5">Ensino Superior Incompleto</option>
-                            <option value="6">Ensino Superior Completo</option>
+                            <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                            <option value="Fundamental Completo">Fundamental Completo</option>
+                            <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                            <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                            <option value="Ensino Superior Completo">Ensino Superior Completo</option>
                         </select>
                     </div>
                 </div>
@@ -77,10 +77,10 @@
                         <label for="estadoCivil">Estado Civil</label>
                         <select class="custom-select" id="estadoCivil" name="estadoCivil">
                             <option selected></option>
-                            <option value="1">Solteiro</option>
-                            <option value="2">Casado</option>
-                            <option value="3">Divorciado</option>
-                            <option value="4">Viúvo</option>
+                            <option value="Solteiro">Solteiro</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Divorciado">Divorciado</option>
+                            <option value="Viúvo">Viúvo</option>
                         </select>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <option value="2">2</option>
                             <option value="2">3</option>
                             <option value="2">4</option>
-                            <option value="3">5+</option>
+                            <option value="5+">5+</option>
                         </select>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-control w-100" type="email" id="email">
+                        <input class="form-control w-100" type="email" id="email" name="email">
                     </div>
                 </div>
             </div>
