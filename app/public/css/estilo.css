@@ -1,6 +1,9 @@
-html {
-    height: 100%;
+
+*{
+    margin: 0;
+    padding: 0;
 }
+
 body {
     height: 80%;
     margin: 0;
@@ -189,7 +192,7 @@ body {
     /*background: linear-gradient( #424242, #212121);*/
     /*background: linear-gradient( #ffffff, #f3dea4);*/
     /*background: rgb(255, 255, 255);*/
-    background: linear-gradient( #ffffff, #ecffff);
+    background: linear-gradient( #ffffff, #fcfcfc);
 }
 
 /* Login & Register Pages*/
@@ -216,6 +219,7 @@ body {
 
 #icone{
     font-size: 2em;
+    box-shadow: none;
 }
 
 /*
@@ -235,10 +239,9 @@ body {
 }
 
 #cadastro .icon-user{
-    width: 55px;
-	height: 45px;
+    width: 45px;
+	height: 35px;
 	border-radius: 50%;
-    margin-bottom: 5px;
     background: #e6e6e6;
 }
 
@@ -248,63 +251,92 @@ body {
 }
 
 #area-principal .icon-user{
-    width: 55px;
-	height: 45px;
+    width: 45px;
+	height: 35px;
 	border-radius: 50%;
-    margin-bottom: 5px;
     background: #e6e6e6;
 }
+
 
 #area-principal .icon-user svg{
     margin-left: 12px;
     margin-top: 5px;
 }
 
+#alunos .icon-user{
+    width: 45px;
+	height: 35px;
+	border-radius: 50%;
+    background: #e6e6e6;
+}
+
+#alunos .icon-user svg{
+    margin-left: 12px;
+    margin-top: 5px;
+}
+
+
 .form-login{
     /*background: #264178;*/
 }
 
 #area-principal header{
-    padding: 10px;
+    padding: 5px;
 }
 
 #cadastro header{
-    padding: 10px;
+    padding: 5px;
 }
 
 #area-principal header{
     background: #264178;
 }
-
 
 /* Pagina 1 */
 #cadastro header{
     background: #264178;
 }
 
+#alunos header{
+    padding: 5px;
+}
+
+#alunos header{
+    background: #264178;
+}
 
 #area-principal header h4{
     font-size: 1.2em;
     color: white;
-    padding-top: 10px;
+    padding-top: 5px;
+}
+
+#alunos header h4{
+    font-size: 1.2em;
+    color: white;
+    padding-top: 5px;
 }
 
 #cadastro header h4{
     font-size: 1.2em;
     color: white;
-    padding-top: 10px;
+    padding-top: 5px;
+    
 }
 
 #area-principal .icon-sec{
-    width: 200px;
-	height: 190px;
+    width: 150px;
+	height: 140px;
 	border-radius: 50%;
     background: #e6e6e6;
     border-radius: 100%;
+    /*
     margin-left: auto;
     margin-right: auto;
+    */
 }
 
+/*
 .icon-sec{
     width: 200px;
 	height: 190px;
@@ -314,15 +346,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+*/
 
 #sec-principal{
-    height: 300px;
-    font-size: 1.7em;
+    height: 270px;
+    font-size: 1.6em;
 }
 
-#sec-principal a{
+
+#sec-principal button{
     text-decoration: none;
     color: #264178;
+    font-size: 0.8em;
 }
 
 .divisor{
@@ -351,6 +386,28 @@ input, select, textarea {
 #cadastro form{
     font-size: 80%;
 }
+
+#logo-cadastro{
+    border: none;
+}
+
+footer.logo{
+    position: fixed;
+    bottom: 10px;
+}
+
+#logo-cadastro svg{
+    position: fixed;
+    right: 20px;
+}
+
+#alunos-cabecalho{
+    background: #264178;
+    color: white;
+    font-size: 0.9em;
+}
+
+
 
 
 
