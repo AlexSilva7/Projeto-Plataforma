@@ -74,7 +74,29 @@ app.post('/cadastro', async(req, res) => {
 })
 
 app.post('/alunos', async(req, res) => {
-    res.render("home/alunos", {name:completeName})
+
+    let alunos = await dbconnection.query('SELECT name, surname, adress, birthdate, scholarity, familyinconme FROM students')
+
+    let students = []
+    let adress = []
+    let birthdates = []
+    let scholarity = []
+    let familyinconmes = []
+
+    for(i in alunos.rows){
+
+        let nameAluno = alunos.rows[i].name + " " + alunos.rows[i].surname
+
+        students.push(nameAluno)
+        adress.push(alunos.rows[i].adress)
+        birthdates.push(alunos.rows[i].birthdate)
+        scholarity.push(alunos.rows[i].scholarity)
+        //incomes.push(alunos.rows[i].income)
+        familyinconmes.push(alunos.rows[i].familyinconme)
+    }
+
+    res.render("home/alunos", {name:completeName, students, adress, birthdates, scholarity, familyinconmes })
+    
 })
 
 app.post('/salvarEstudante', async(req, res) => {
