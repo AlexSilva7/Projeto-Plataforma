@@ -1,5 +1,4 @@
 
-
 <%- include('../common/head') %>
 
 <body id="alunos">
@@ -11,12 +10,12 @@
     </div>
 
     <div id="alunos-cabecalho">
-        <div class="container">
+        <div class="" style="margin-left: 5%;">
         <div class="row">
             <div class="col-md-2">
                 NOME
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 ENDEREÇO
             </div>
             <div class="col-md-2">
@@ -32,30 +31,68 @@
         </div>
     </div>
 
-    
-    <div class=" mt-4 pl-3">
+    <div id="estudantes">
         <% for(i in students){ %> 
-        <div class="row">
-            <div class="col-md-2">
+        <div class="row estudante">
+            <div class="col-md-2 pl-4 borda-alunos" >
                 <%= students[i] %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3 borda-alunos">
                 <%= adress[i] %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 pl-5 borda-alunos">
                 <%= birthdates[i] %>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 borda-alunos">
                 <%= scholarity[i] %>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2 pl-4">
                 <%= familyinconmes[i] %>
             </div>
         </div>
         <% } %>  
     </div>
-     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        
+        var estudantes = document.getElementById("estudantes")
+        var estudante = estudantes.getElementsByClassName("row")
+
+        var vetorNomes = [] 
+        var vetorEnderecos = [] 
+        var vetorDatas = [] 
+        var vetorEscolaridade = [] 
+        var vetorRendaFamiliar = [] 
+
+        for(var x = 0; x < estudante.length; x++){
+            var op = estudante[x].getElementsByTagName("div")
+            vetorNomes.push(op[0].innerHTML.trim())
+            vetorEnderecos.push(op[1].innerHTML.trim())
+            vetorDatas.push(op[2].innerHTML.trim())
+            vetorEscolaridade.push(op[3].innerHTML.trim())
+            vetorRendaFamiliar.push(op[4].innerHTML.trim())
+        } 
+
+        /*
+        for(var i = 0; i < vetorNomes.length; i++){
+            console.log(vetorNomes[i])
+            console.log(vetorEnderecos[i])
+            console.log(vetorDatas[i])
+            console.log(vetorEscolaridade[i])
+            console.log(vetorRendaFamiliar[i])
+        }
+        */
+
+        for(var i = 0; i < 4; i++){
+            $(estudante[i]).hide();
+        }
+        
 
 
+        
+
+    </script>
 
 </body>
